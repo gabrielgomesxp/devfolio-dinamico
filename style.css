@@ -9,6 +9,10 @@
     --fonte-principal: Arial, sans-serif;
     --button-btn: #1c8139;
     --base-size-16: 1rem;
+    --button-btn-text: #fff;
+    --fonte-branca: #fff;
+    --background-cinza: #444;
+    --cor-cinza: #555;
 }
 
 /* Reset e Estilos Globais */
@@ -21,10 +25,30 @@ html, body {
 
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: var(--cor-fundo-pagina);
     color: var(--cor-texto-principal);
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Adicione no final do seu CSS */
+
+body.dark-mode {
+    background-color: #1c1c1c; /* Cinza bem escuro */
+}
+body.dark-mode .main-login {
+    background: var(--background-cinza);
+    color:var(--fonte-branca);
+    border: 1px solid var(--cor-cinza)
+}
+/* Bônus: vamos estilizar um pouco o botão */
+#theme-toggle {
+    padding: 8px 16px;
+    border: 1px solid #d8dee4;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 /* Estilo da Caixa de Login */
@@ -43,6 +67,7 @@ input.btn {
     width: 100%;
     height: 40px !important;
     align-content: center;
+    color: var(--button-btn-text)
 }
 input#password-input, input#username-input {
     width: 100%;
