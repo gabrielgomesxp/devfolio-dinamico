@@ -1,6 +1,54 @@
+/* Declaração de Variáveis Globais */
+:root {
+    --cor-fundo-pagina: #f0f2f5;
+    --cor-fundo-caixa: white;
+    --cor-borda: #d8dee4;
+    --cor-texto-principal: #333;
+    --borda-arredondada: 6px;
+    --espacamento-padrao: 24px;
+    --fonte-principal: Arial, sans-serif;
+    --button-btn: #1c8139;
+    --base-size-16: 1rem;
+}
+
+/* Reset e Estilos Globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-principal);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-principal);
+}
+
+/* Estilo da Caixa de Login */
+.main-login-head {
+    display: flex;
+    justify-content: center;
+}
 .main-login {
-    text-size-adjust: 100%;
-    padding: var(--base-size-16);
+    background-color: var(--cor-fundo-caixa);
+    padding: var(--espacamento-padrao);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-arredondada);
+}
+input.btn {
+    background-color: var(--button-btn);
+    width: 100%;
+    height: 40px !important;
+    align-content: center;
+}
+input#password-input, input#username-input {
+    width: 100%;
+    height: 30px !important;
+}
+.main-login-att form {
     gap: var(--base-size-16);
     display: flex;
     align-items: center;
@@ -16,6 +64,19 @@
 footer {
     text-align: center;
     width: 100%;
-    background-color: #eee;
-    margin-top: auto;
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 5px var(--base-size-16);
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 1px solid;
+    border-radius: 6px;
+    appearance: none;
 }
